@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Service</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
+
+    body {
+        font-family: 'Montserrat', Verdana, Tahoma, sans-serif; /* Make sure Montserrat is first */
+        margin: 0;
+        padding: 0;
+        }
+
+        header {
+            position: fixed; /* Makes the header fixed */
+            top: 0; /* Positions it at the top */
+            left: 0; /* Aligns it to the left */
+            width: 100%; /* Makes it full width */
+            background-color: #000; /* Keeps the background color */
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+       
+
+    
+        
+        nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 1px;
+        margin-right: 50px;
+        font-weight: 600; /* Increase thickness */
+        }
+        
+        .main-content {
+        background-image: url(background1.png);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+    }
+    .main-content h1 {
+    font-size: 90px; 
+    font-weight: bold; /* This makes it bold */
+    margin: 7px 7px;
+}
+    .main-content p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        margin: 0.5rem 0 2rem;
+
+    }
+    .button-container {
+        display: flex;
+        gap: 1rem;
+    }
+    .button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .plan-button {
+        background-color: #061dc1;
+        color: #fff;
+        border-radius: 6.5px;
+        border: none;
+        padding: 10px;
+        font-weight: bold;
+        width: 175px;
+        height: 40px;
+        margin: 10px;
+        font-size: 13.5px;
+
+    }
+    .bundle-button {
+        background-color: #fff;
+        color: #000;
+        border-radius: 6.5px;
+        border: none;
+        padding: 10px;
+        font-weight: bold;
+        width: 175px;
+        height: 40px;
+        margin: 10px;
+        font-size: 13.5px;
+    }
+    .otherlogo.png 
+    {
+        width: 15px;
+        height: 15px;
+    }
+
+    .plans-container {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 2rem; /* Space between the divs */
+    padding: 2rem;
+}
+
+
+.plan, .bundle {
+    background-color: transparent;
+    border-radius: 12px;
+    width: 400px; /* Increase the width */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding doesn’t affect width */
+        }
+
+    .plan h4, .bundle h4 {
+        font-weight: 300; 
+         margin-top: 0.5rem;
+         margin-bottom: 0.5rem;
+        }
+        
+    .price {
+         font-size: 2rem; /* Increase size as needed */
+         font-weight: bold; /* Make it bold */
+        }
+
+
+        .a {
+            font-weight: bold;
+        }
+
+    .bundle img {
+    max-width: 100%; /* Ensure images resize properly */
+    height: auto;
+        }
+
+    .plan img {
+    max-width: 100%;
+    max-height: 100%;
+        }
+        .plan-options-section {
+    background-color: #061dc1; /* Blue background */
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+.plan-options-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Wrapper with white background and low opacity */
+.plan-options-background {
+    background-color: rgba(255, 255, 255, 0.1); /* White with low opacity */
+    border-radius: 15px;
+    padding: 7px;
+    display: inline-block;
+    margin-bottom: 30px;
+    width: 700px;
+    height: 40px;
+    border-radius: 30px;
+
+
+}
+
+/* Wrapper for the buttons */
+.plan-options-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+/* General button styles */
+.plan-tab {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Special styling for the bundle tab */
+.bundle-tab {
+    background-color: white;
+    color: black;
+}
+
+.plan-tab.active {
+    background-color: white;
+    color: black;
+    padding: 12px 25px;
+    width: 300px; /* Similar to the bundle-tab style */
+}
+
+
+.plan-images {
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.plan-image img {
+    
+    display: block;
+    margin: 0 auto 10px;
+  
+}
+
+.whats-new-section {
+    background-color: #060422; /* Dark blue background */
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+.whats-new-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Grid container for images */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(3, 2fr);
+    gap: 15px;
+    justify-items: center; /* Center items horizontally */
+    padding: 20px;
+   
+}
+
+.grid-item img {
+    width: 350px; /* Adjust width as necessary */
+    height: auto;
+   
+}
+
+    
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="maxdiv.png 22-07-36-964.png" alt="Max Plan"
+        width="100"
+        height="27">
+        <nav>
+            <a href="#">ENGLISH</a>
+            <a href="#">SIGN IN</a>
+            <a href="#">SIGN UP NOW</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h1>It's all here.</h1>
+        <p>Choose a MAX plan, or bundle for the best value in entertainment.</p>
+
+
+        <div class="plans-container">
+            <div class="plan">
+                <div class="max">
+                <img src="maxdiv.png 22-07-36-964.png" alt="Max Plan"
+                width="150"
+                height="41">
+                </div>
+                <h4>PLANS START AT <span class="price">$9.99</span>/MONTH</h4>
+                <button class="plan-button">GET MAX</button>
+            </div>
+            <div class="bundle">
+                <img src="otherlogo.png" alt="Bundle Plan"
+                width="700"
+                height="75">
+                <h4>PLANS START AT <span class="price">$16.99</span>/MONTH</h4>
+                <button class="bundle-button">GET THE BUNDLE</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="plan-options-section">
+        <h2>Find Your Perfect Plan</h2>
+        <div class="plan-options-background">
+            <div class="plan-options-tabs">
+                <div class="plan-tab active">BUNDLE</div> <!-- 'active' by default -->
+                <div class="plan-tab">MONTHLY</div>
+                <div class="plan-tab">YEARLY</div>
+            </div>
+        </div>
+
+        <script>
+            // Get all plan-tab elements
+            const tabs = document.querySelectorAll('.plan-tab');
+        
+            // Loop through each tab and add a click event
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove 'active' class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+        
+                    // Add 'active' class to the clicked tab
+                    this.classList.add('active');
+                });
+            });
+        </script>
+        
+        <div class="plan-images">
+            <div class="with-ads">
+                <img src="withads.png" alt="Bundle Plan"
+                width="500"
+                height="471">
+            </div>
+            <div class="no-ads">
+                <img src="noads.png" alt="Yearly Plan"
+                width="500"
+                height="471">
+            </div>
+        </div>
+    </div>
+    
+    <div class="whats-new-section">
+        <h2>See What's New</h2>
+        <div class="grid-container">
+            <div class="grid-item"><img src="image1.jpeg" alt="image1"></div>
+            <div class="grid-item"><img src="image2.jpeg" alt="image2"></div>
+            <div class="grid-item"><img src="image3.jpeg" alt="image3"></div>
+            <div class="grid-item"><img src="image4.jpeg" alt="image4"></div>
+            <div class="grid-item"><img src="image5.jpeg" alt="image5"></div>
+            <div class="grid-item"><img src="image6.jpg" alt="image6"></div>
+        </div>
+    </div>
+
+
+</body>
+</html>
