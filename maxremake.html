@@ -8,17 +8,17 @@
       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
 
     body {
-        font-family: 'Montserrat', Verdana, Tahoma, sans-serif; /* Make sure Montserrat is first */
+        font-family: 'Montserrat', Verdana, Tahoma, sans-serif; 
         margin: 0;
         padding: 0;
         }
 
         header {
-            position: fixed; /* Makes the header fixed */
-            top: 0; /* Positions it at the top */
-            left: 0; /* Aligns it to the left */
-            width: 100%; /* Makes it full width */
-            background-color: #000; /* Keeps the background color */
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            background-color: #000; 
             color: #fff;
             padding: 1rem;
             display: flex;
@@ -34,7 +34,7 @@
         text-decoration: none;
         margin-left: 1px;
         margin-right: 50px;
-        font-weight: 600; /* Increase thickness */
+        font-weight: 600; 
         }
         
         .main-content {
@@ -51,7 +51,7 @@
     }
     .main-content h1 {
     font-size: 90px; 
-    font-weight: bold; /* This makes it bold */
+    font-weight: bold; 
     margin: 7px 7px;
 }
     .main-content p {
@@ -103,10 +103,10 @@
     }
 
     .plans-container {
-    display: flex; /* Flexbox layout */
-    justify-content: center; /* Center the items horizontally */
-    align-items: center; /* Align items vertically */
-    gap: 2rem; /* Space between the divs */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 2rem; 
     padding: 2rem;
 }
 
@@ -114,13 +114,13 @@
 .plan, .bundle {
     background-color: transparent;
     border-radius: 12px;
-    width: 400px; /* Increase the width */
+    width: 400px; 
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    box-sizing: border-box; /* Ensure padding doesn’t affect width */
+    box-sizing: border-box; 
         }
 
     .plan h4, .bundle h4 {
@@ -130,8 +130,8 @@
         }
         
     .price {
-         font-size: 2rem; /* Increase size as needed */
-         font-weight: bold; /* Make it bold */
+         font-size: 2rem; 
+         font-weight: bold; 
         }
 
 
@@ -140,7 +140,7 @@
         }
 
     .bundle img {
-    max-width: 100%; /* Ensure images resize properly */
+    max-width: 100%; 
     height: auto;
         }
 
@@ -149,7 +149,7 @@
     max-height: 100%;
         }
         .plan-options-section {
-    background-color: #061dc1; /* Blue background */
+    background-color: #061dc1; 
     padding: 40px;
     text-align: center;
     color: white;
@@ -160,9 +160,9 @@
     margin-bottom: 20px;
 }
 
-/* Wrapper with white background and low opacity */
+
 .plan-options-background {
-    background-color: rgba(255, 255, 255, 0.1); /* White with low opacity */
+    background-color: rgba(255, 255, 255, 0.1); 
     border-radius: 15px;
     padding: 7px;
     display: inline-block;
@@ -174,14 +174,13 @@
 
 }
 
-/* Wrapper for the buttons */
 .plan-options-tabs {
     display: flex;
     justify-content: center;
     gap: 80px;
 }
 
-/* General button styles */
+
 .plan-tab {
     background-color: transparent;
     color: white;
@@ -193,7 +192,7 @@
     transition: all 0.3s ease;
 }
 
-/* Special styling for the bundle tab */
+
 .bundle-tab {
     background-color: white;
     color: black;
@@ -203,7 +202,7 @@
     background-color: white;
     color: black;
     padding: 12px 25px;
-    width: 300px; /* Similar to the bundle-tab style */
+    width: 300px; 
 }
 
 
@@ -222,7 +221,7 @@
 }
 
 .whats-new-section {
-    background-color: #060422; /* Dark blue background */
+    background-color: #060422; 
     padding: 40px;
     text-align: center;
     color: white;
@@ -233,19 +232,19 @@
     margin-bottom: 20px;
 }
 
-/* Grid container for images */
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     grid-template-rows: repeat(3, 2fr);
     gap: 15px;
-    justify-items: center; /* Center items horizontally */
+    justify-items: center; 
     padding: 20px;
    
 }
 
 .grid-item img {
-    width: 350px; /* Adjust width as necessary */
+    width: 350px; 
     height: auto;
    
 }
@@ -295,23 +294,23 @@
         <h2>Find Your Perfect Plan</h2>
         <div class="plan-options-background">
             <div class="plan-options-tabs">
-                <div class="plan-tab active">BUNDLE</div> <!-- 'active' by default -->
+                <div class="plan-tab active">BUNDLE</div> 
                 <div class="plan-tab">MONTHLY</div>
                 <div class="plan-tab">YEARLY</div>
             </div>
         </div>
 
         <script>
-            // Get all plan-tab elements
+           
             const tabs = document.querySelectorAll('.plan-tab');
         
-            // Loop through each tab and add a click event
+            
             tabs.forEach(tab => {
                 tab.addEventListener('click', function() {
-                    // Remove 'active' class from all tabs
+                   
                     tabs.forEach(t => t.classList.remove('active'));
         
-                    // Add 'active' class to the clicked tab
+                   
                     this.classList.add('active');
                 });
             });
